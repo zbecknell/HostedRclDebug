@@ -52,7 +52,7 @@ namespace HostedRclDebug.Server
 			{
 				endpoints.MapRazorPages();
 				endpoints.MapControllers();
-				endpoints.MapFallbackToFile("index.html");
+				endpoints.MapFallbackToController("Index", "Host");
 			});
 		}
 	}
