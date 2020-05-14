@@ -49,6 +49,9 @@ namespace HostedRclDebug.Server
 
 			app.UseRouting();
 
+			app.UseAuthentication();
+			app.UseAuthorization();
+
 			app.UseBlazorFrameworkFiles();
 
 			app.UseRouting();

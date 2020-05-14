@@ -16,6 +16,7 @@
             }
         },
         {
+            "trace": true,
             "name": ".NET Core Debug Blazor Web Assembly in Chrome",
             "type": "pwa-chrome",
             "request": "launch",
