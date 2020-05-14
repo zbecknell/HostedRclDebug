@@ -1,4 +1,3 @@
-using HostedRclDebug.UI;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -12,7 +11,7 @@ namespace HostedRclDebug.Client
 		public static async Task Main(string[] args)
 		{
 			var builder = WebAssemblyHostBuilder.CreateDefault(args);
-			builder.RootComponents.Add<App>("app");
+			builder.RootComponents.Add<HostedRclDebug.UI.App>("app");
 
 			builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 

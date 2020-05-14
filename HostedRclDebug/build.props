@@ -1,6 +1,7 @@
 <Project>
   <PropertyGroup>
     <LangVersion>8.0</LangVersion>
+    <RazorLangVersion>3.0</RazorLangVersion>
     <Configurations>Debug;Debug_C;Debug_S;Release_C;Release_S</Configurations>
   </PropertyGroup>
 

@@ -45,8 +45,11 @@ namespace HostedRclDebug.Server
 			}
 
 			app.UseHttpsRedirection();
-			app.UseBlazorFrameworkFiles();
 			app.UseStaticFiles();
+
+			app.UseRouting();
+
+			app.UseBlazorFrameworkFiles();
 
 			app.UseRouting();
 
