@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostedRclDebug.Client", "Ho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostedRclDebug.Shared", "HostedRclDebug\Shared\HostedRclDebug.Shared.csproj", "{C5CC4983-0060-43AA-87BA-B39BD3542C06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostedRclDebug.UI", "HostedRclDebug.UI\HostedRclDebug.UI.csproj", "{B497F736-E897-4DB9-BD5F-9A1E95A0873C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostedRclDebug.UI", "HostedRclDebug\UI\HostedRclDebug.UI.csproj", "{B497F736-E897-4DB9-BD5F-9A1E95A0873C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

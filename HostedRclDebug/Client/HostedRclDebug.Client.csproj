@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\HostedRclDebug.UI\HostedRclDebug.UI.csproj" />
+    <ProjectReference Include="..\UI\HostedRclDebug.UI.csproj" />
     <ProjectReference Include="..\Shared\HostedRclDebug.Shared.csproj" />
   </ItemGroup>
 

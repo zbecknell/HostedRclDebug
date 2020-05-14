@@ -11,7 +11,7 @@ namespace HostedRclDebug.Server.Controllers
 	[Route("~/")]
 	public class HostController : Controller
 	{
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
 		{
 			return View();
 		}
