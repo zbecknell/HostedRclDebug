@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <Configurations>Debug;Debug_C;Debug_S;Release_C;Release_S</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_C|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG_C;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_C|AnyCPU'">
+    <DefineConstants>RELEASE_C;RELEASE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_S|AnyCPU'">
+    <DefineConstants>DEBUG_S;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_S|AnyCPU'">
+    <DefineConstants>RELEASE_S;RELEASE</DefineConstants>
+  </PropertyGroup>
+</Project>
