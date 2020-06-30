@@ -54,8 +54,6 @@ namespace HostedRclDebug.Server
 
 			app.UseBlazorFrameworkFiles();
 
-			app.UseRouting();
-
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();

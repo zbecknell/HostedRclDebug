@@ -1,0 +1,14 @@
+<Project>
+  <Import Project="Utilities.Build.props" />
+
+  <Target Name="NotifyBuildComplete" BeforeTargets="AfterBuild" Condition="('$(Configuration)'=='Debug_C' Or '$(Configuration)'=='Debug_S' Or '$(Configuration)'=='Debug') And '$(IsWindows)' == 'true'">
+    <PropertyGroup>
+      <myscript>$(PowerShell)
+      $path = Join-Path -Path "$(ProjectDir)" -ChildPath ..\Tools\NotifyBuildComplete.ps1"
+      . "$path" "$(ProjectName)"
+      </myscript>
+    </PropertyGroup>
+
+    <Exec Command="$(myscript)" EchoOff="true" />
+  </Target>
+</Project>

@@ -1,7 +1,25 @@
 <Project>
+
+  <PropertyGroup>
+    <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildRuntimeType)' == 'Core'">
+    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+  </PropertyGroup>
+
+  <!-- This allows us to use powershell for the build notification (see bottom) -->
+  <PropertyGroup>
+    <PowerShell Condition="'$(IsWindows)' == 'true'"># 2>nul || type %~df0|find /v "setlocal"|find /v "errorlevel"|powershell.exe -noninteractive -executionpolicy unrestricted -noprofile -&amp; exit %errorlevel% || #</PowerShell>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RunWebCompiler Condition="'$(IsOSX)' == 'true'">false</RunWebCompiler>
+  </PropertyGroup>
+
   <PropertyGroup>
     <LangVersion>8.0</LangVersion>
-    <RazorLangVersion>3.0</RazorLangVersion>
     <Configurations>Debug;Debug_C;Debug_S;Release_C;Release_S</Configurations>
   </PropertyGroup>
 

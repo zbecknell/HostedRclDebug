@@ -1,10 +1,10 @@
 <Telerik.Blazor.Components.TelerikRootComponent>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
-            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(Foo.Shared.MainLayout)" />
         </Found>
         <NotFound>
-            <LayoutView Layout="@typeof(MainLayout)">
+            <LayoutView Layout="@typeof(Foo.Shared.MainLayout)">
                 <p>Sorry, there's nothing at this address.</p>
             </LayoutView>
         </NotFound>

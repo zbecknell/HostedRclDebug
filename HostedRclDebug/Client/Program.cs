@@ -11,7 +11,7 @@ namespace HostedRclDebug.Client
 		public static async Task Main(string[] args)
 		{
 			var builder = WebAssemblyHostBuilder.CreateDefault(args);
-			builder.RootComponents.Add<HostedRclDebug.UI.App>("app");
+			builder.RootComponents.Add<HostedRclDebug.Foo.App>("app");
 
 			builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
